@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { WebView } from 'react-native-webview';
+import { StyleSheet } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <WebView style={styles.container}
+      source={{ html: '<iframe  width=100% height=90% margin-top=30% margin=0 padding= 0 src="https://televisionlibre.net/es/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' }}
+
+    />
+    // <WebView
+    //   source={{ html: '<iframe   src="https://televisionlibre.net/es/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' }}
+    //   style={{ marginTop: 20 }}
+    // />
   );
 }
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    padding: 0,
+    margin: 0
+  }
 });
